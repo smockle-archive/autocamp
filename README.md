@@ -1,4 +1,4 @@
 autocamp
 ============
 
-AutoHotkey script that emulates OS X keyboard shortcuts in Windows 8.
+An AutoHotkey script that emulates OS X keyboard shortcuts in Windows 8.
