@@ -89,9 +89,9 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 #0::^0
 
 ;following section enables natural scrolling
-WheelUp::
-Send {WheelDown}
-Return
-WheelDown::
-Send {WheelUp}
-Return
+;WheelUp::
+;Send {WheelDown}
+;Return
+;WheelDown::
+;Send {WheelUp}
+;Return
