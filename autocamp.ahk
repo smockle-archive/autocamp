@@ -40,6 +40,10 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 #Down::Send {Lctrl down}{End}{Lctrl up}
 #Left::Send {Home}
 #Right::Send {End}
+#+Up::Send {Lctrl down}{LShift down}{Home}{LShift up}{Lctrl up}
+#+Down::Send {Lctrl down}{LShift down}{End}{LShift up}{Lctrl up}
+#+Left::Send {LShift down}{Home}{LShift up}
+#+Right::Send {LShift down}{End}{LShift up}
 !Up::Send {Home}
 !Down::Send {End}
 !Left::^Left
@@ -49,14 +53,15 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ;affects all number and letter keys
 ;note that some keys, like winkey-l and winkey-d
 ;need to be remapped a differeny way
-;otherwise autohotkey will not take over 
+;otherwise autohotkey will not take over
 #a::^a
 #b::^b
 #c::^c
-;#d::^d 
+;#d::^d
 ;#e::^e
 ;following won't remap using the normal method
 #f::Send {LCtrl down}{f}{LCtrl up}
+#+f::Send {LCtrl down}{LShift down}{f}{LShift up}{LCtrl up}
 #g::^g
 #h::^h
 ;#i::^i
@@ -87,11 +92,13 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 #8::^8
 #9::^9
 #0::^0
+#/::^/
+#+/::Send {LCtrl down}{LShift down}{/}{LShift up}{LCtrl up}
 
 ;following section enables natural scrolling
-;WheelUp::
-;Send {WheelDown}
-;Return
-;WheelDown::
-;Send {WheelUp}
-;Return
+WheelUp::
+Send {WheelDown}
+Return
+WheelDown::
+Send {WheelUp}
+Return
