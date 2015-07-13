@@ -105,6 +105,9 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ;spotlight
 #Space::Send {LWin down}{LWin up}
 
+;screenshot
+#+4::Send {LWin down}{PrintScreen}{LWin up}
+
 ;following section enables natural scrolling
 WheelUp::
 Send {WheelDown}
