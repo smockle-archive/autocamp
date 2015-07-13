@@ -93,7 +93,17 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 #9::^9
 #0::^0
 #/::^/
+#\::^\
 #+/::Send {LCtrl down}{LShift down}{/}{LShift up}{LCtrl up}
+
+;aero snap
+#!Left::Send {LWin down}{Left}{LWin up}
+#!Right::Send {LWin down}{Right}{LWin up}
+#!Up::Send {LWin down}{Up}{LWin up}
+#!Down::Send {LWin down}{Down}{LWin up}
+
+;spotlight
+#Space::Send {LWin down}{LWin up}
 
 ;following section enables natural scrolling
 WheelUp::
